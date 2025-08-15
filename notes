@@ -57,4 +57,8 @@ $env:SPRING_APPLICATION_NAME=""
 $env:SPRING_DATASOURCE_URL=""
 
 $env:MONGO_URI="mongodb://localhost:27017/chatapp"
-$env:FRONTEND_URL="http://localhost:5173"
+$env:FRONTEND_URL="http://localhost:5173"'
+
+
+
+#mongodb+srv://root:groot@cluster0.ewtxd1p.mongodb.net/chatapp?retryWrites=true&w=majority
