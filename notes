@@ -1,0 +1,60 @@
+this is a notes file yha hum samhte jayenge terms used in the project
+
+👉 Web Socket - webscoket ek two way communication protocal hai
+               - It's a permanent connection between your browser (client) and the server
+               - Both can send messages to each other anytime
+
+               🔁 In contrast:
+               HTTP = You knock on the door (send request), get a reply, and leave (one-way)
+               WebSocket = You stay connected and keep talking freely (two-way)
+
+
+👉 Stomp       - it is known as Simple text oriented messaging protocol
+               -  It's a messaging format used on top of WebSocket
+               - It lets you send and receive messages from specific topics or destinations
+
+
+
+👉 Message Broker    - just like a postman is acts as a middle man between the receiver and sender
+                     Imagine:
+                     -You write a letter 📩 to your friend
+                     You drop it in a post box 📮
+                     The post office 🏤 takes care of delivering it to your friend
+                     You don't directly hand it to them — that’s the job of the post office.
+
+                     ✅ In tech, a message broker works the same way:
+                     It receives messages from one part of your app (called producer)
+                     It delivers them to another part (called consumer)
+
+                       In WebSocket + STOMP Context:
+                      When you use WebSocket with STOMP in Spring Boot:
+
+                      The message broker handles routing of messages to different destinations (topics/queues)
+
+                      💡 Example:
+                      You send a message to /app/chat.send, and the message broker:
+
+                      Takes it
+
+                      Delivers it to /topic/public where all users are subscribed
+
+                      in short client se message lekar ye he server kai pass jata hai
+
+
+
+👉withSockJs        - biht sare browsers may be support na kre web socket for communication
+                      toh wha pr ye help krta hai
+
+
+👉  .addEndPoint("/ws)   -Toh /ws ye batata hai “Yahi se connection start hoga.”
+
+                         🔧 Backend yeh bol raha hai: "Agar koi /ws pe WebSocket connection maange, toh main allow karta hoon.
+
+
+👉   .setAllowedOrigins("frontend.com") -- kis origin se request allow krni hai
+
+$env:SPRING_APPLICATION_NAME=""
+$env:SPRING_DATASOURCE_URL=""
+
+$env:MONGO_URI="mongodb://localhost:27017/chatapp"
+$env:FRONTEND_URL="http://localhost:5173"
